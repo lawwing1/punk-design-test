@@ -5,7 +5,7 @@
  * lastModify: Frank 2020-07-21
  */
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devConfig = {
@@ -25,8 +25,8 @@ const devConfig = {
                             },
                         },
                     },
-                    'sass-loader',
                     'postcss-loader',
+                    'sass-loader',
                 ],
             },
             {
@@ -35,17 +35,16 @@ const devConfig = {
             },
         ],
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-source-map',
 
     devServer: {
-        contentBase: './dist',
+        static: './dist',
         historyApiFallback: true,
         open: true,
+        // host: '0.0.0.0',
         port: 3000,
-        hot: true,
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './public/indexDev.html',
             favicon: './public/favicon.ico',

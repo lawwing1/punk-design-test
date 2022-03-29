@@ -22,7 +22,7 @@ const RootRouter = (): JSX.Element => {
                 /* <------------------------------------ **** Loading Animation START **** ------------------------------------ */
                 <div>
                     <div>
-                        <Row className={style.loadingWrapper} type="flex" align="middle">
+                        <Row className={style.loadingWrapper} align="middle">
                             <Col className={style.loadingFormCol}>
                                 <div className={style.loadingPageWrapper}>
                                     <div className={style.loadingPageTitle}>DataReachable</div>

@@ -2,16 +2,13 @@
  * file: Webpack production setting file
  * date: 2020-07-21
  * author: Frank
- * lastModify: Frank 2020-07-21
+ * lastModify: Frank 2020-08-28
  */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const commonConfig = require('./webpack.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const WorkboxPlugin = require('workbox-webpack-plugin');
-// const WebpackPwaManifest = require('webpack-pwa-manifest');
-// const Config = require('../SystemConfig');
 
 const prodConfig = {
     mode: 'production',
@@ -20,16 +17,23 @@ const prodConfig = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                        },
+                    },
                     {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 2,
-                            modules: true,
+                            modules: {
+                                localIdentName: '[local]',
+                            },
                         },
                     },
-                    'sass-loader',
                     'postcss-loader',
+                    'sass-loader',
                 ],
             },
             {
@@ -38,18 +42,18 @@ const prodConfig = {
             },
         ],
     },
-    optimization: {},
+     devtool: "source-map",
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
             favicon: './public/favicon.ico',
         }),
-        new MiniCssExtractPlugin({}),
+        new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
         new CompressionPlugin({ test: /\.js(\?.*)?$/i, algorithm: 'gzip' }),
     ],
     output: {
-        filename: '[name].[contenthash].js',
-        chunkFilename: '[name].[contenthash].js',
+        filename: 'js/[name].[contenthash].js',
+        chunkFilename: 'js/[name].[contenthash].js',
     },
 };
 
