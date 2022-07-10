@@ -1,0 +1,39 @@
+.pagenation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80rem;
+    height: 5rem;
+    border: 1px solid red;
+    .pag_firstPreIcon {
+        cursor: pointer;
+    }
+    .pag_preIcon {
+        margin: 0 1.5rem;
+        cursor: pointer;
+    }
+    .pag_list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .pag_item {
+            margin: 0 1rem;
+            padding: .5rem 1rem;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+        .pag_item_current {
+            border: 1px solid skyblue;
+        }
+    }
+    .pag_nextIcon {
+        margin: 0 1.5rem;
+        cursor: pointer;
+    }
+    .pag_lastNextIcon {
+        cursor: pointer;
+    }
+    .pagicon_disable {
+        cursor: not-allowed;
+    }
+}
