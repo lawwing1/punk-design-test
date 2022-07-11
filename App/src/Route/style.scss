@@ -24,7 +24,7 @@
     font: normal normal normal 50px poppins-semibold, poppins, sans-serif;
     letter-spacing: 1rem;
     margin-top: 0.5rem;
-    color: $orange;
+    // color: $orange;
     font-size: $fs_42;
     @media screen and (max-width: $md) {
         font-size: $fs_19;
@@ -46,7 +46,7 @@
 @mixin loadingCube {
     width: 33%;
     height: 33%;
-    background-color: $orange;
+    // background-color: $orange;
     float: left;
     -webkit-animation: loadingCubeGridScaleDelay 1.3s infinite ease-in-out;
     animation: loadingCubeGridScaleDelay 1.3s infinite ease-in-out;

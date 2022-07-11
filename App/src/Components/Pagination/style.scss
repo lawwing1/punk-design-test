@@ -1,39 +1,122 @@
-.pagenation {
+/**
+ * @file style file of Pager component
+ * @date 2022-01-06
+ * @author lidaoping
+ * @lastModify lidaoping 2022-01-06
+ */
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 START * --------------------------- */
+
+.pagination_container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 80rem;
-    height: 5rem;
-    border: 1px solid red;
-    .pag_firstPreIcon {
-        cursor: pointer;
-    }
-    .pag_preIcon {
-        margin: 0 1.5rem;
-        cursor: pointer;
-    }
-    .pag_list {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .pag_item {
-            margin: 0 1rem;
-            padding: .5rem 1rem;
-            border: 1px solid #eee;
-            cursor: pointer;
-        }
-        .pag_item_current {
-            border: 1px solid skyblue;
-        }
-    }
-    .pag_nextIcon {
-        margin: 0 1.5rem;
-        cursor: pointer;
-    }
-    .pag_lastNextIcon {
-        cursor: pointer;
-    }
-    .pagicon_disable {
-        cursor: not-allowed;
+    justify-content: center;
+}
+
+.pagination_pages {
+    display: flex;
+}
+
+.pagination_pageItem {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 3px;
+    border: 1px solid $transparent;
+    transition: border 0.25s;
+    &.active {
+        border: 1px solid $auxiliary_500;
     }
 }
+
+.pagination_pageItem:hover {
+    border: 1px solid $auxiliary_500;
+    cursor: pointer;
+}
+
+.pagination_pageItem_default {
+    border-radius: 5px;
+}
+
+.pagination_pageItem_solid {
+    border: 1px solid $neutral_200;
+}
+
+.pagination_point {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 5px;
+}
+
+@mixin iconStyle {
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid $transparent;
+    margin: 0 3px;
+    transition: border 0.25s;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $auxiliary_500;
+    }
+    &.disabled {
+        cursor: no-drop;
+    }
+}
+
+@mixin iconSolidStyle {
+    border: 1px solid $neutral_200;
+    border-radius: 0px;
+    &:hover {
+        border: 1px solid $auxiliary_500;
+    }
+    &.disabled {
+        &:hover {
+            border: 1px solid $neutral_200;
+        }
+    }
+}
+
+.pagination_prevFirstPageContainer {
+    @include iconStyle();
+}
+
+.pagination_prevPageContainer {
+    @include iconStyle();
+}
+
+.pagination_nextPageContainer {
+    @include iconStyle();
+}
+
+.pagination_nextLastPageContainer {
+    @include iconStyle();
+}
+
+.pagination_prevFirstPageContainer_solid {
+    @include iconSolidStyle();
+}
+
+.pagination_prevPageContainer_solid {
+    @include iconSolidStyle();
+}
+
+.pagination_nextPageContainer_solid {
+    @include iconSolidStyle();
+}
+
+.pagination_nextLastPageContainer_solid {
+    @include iconSolidStyle();
+}
+
+/* <--------------------------- * SECTION1 END * --------------------------- */

@@ -1,17 +1,87 @@
-/**
-* file: project style color file
-* date: 2020-07-21
-* author: Frank
-* lastModify: Frank 2020-07-21
-*/
+$magenta: #cd3abd;
 
-//This file will contain all the color that will be used in the project
-// color list
-$darkBlue: #264c59;
-$orange: #fd6b0b;
-$ligthGray: #e0e0e0;
-$textGray: #6a6a6a;
-$gray: #dadada;
-$dark: #232323;
-$lightDark: #454545;
-$white: #ffffff;
+$white: #fff;
+$black: #000;
+$transparent: transparent;
+
+$neutral_50: #fafafa;
+$neutral_100: #f5f5f5;
+$neutral_200: #ebebeb;
+$neutral_300: #bdbdbd;
+$neutral_400: #757575;
+$neutral_500: #4d4d4d;
+$neutral_600: #212121;
+$neutral_700: #0a0a0a;
+
+/**
+ * Primary colors
+ */
+$primary_10: #f7feff;
+$primary_50: #e9f7f8;
+$primary_100: #e3fcfc;
+$primary_200: #c4f5f5;
+$primary_300: #a5e0e5;
+$primary_400: #67cdd6;
+$primary_500: #3cbbc7;
+$primary_600: #22a6b3;
+$primary_700: #1394a1;
+
+/**
+ * Auxiliary colors
+ */
+$auxiliary_50: #fffbfa;
+$auxiliary_100: #fff4f0;
+$auxiliary_200: #ffe9e0;
+$auxiliary_300: #ffd8c9;
+$auxiliary_400: #ffb8a1;
+$auxiliary_500: #ff9370;
+$auxiliary_600: #ff7745;
+$auxiliary_700: #ff6430;
+
+/**
+ * Danger
+ */
+$danger_50: #fffafa;
+$danger_100: #fef4f5;
+$danger_200: #ffebec;
+$danger_300: #ffc2c6;
+$danger_400: #f58e95;
+$danger_500: #eb6364;
+$danger_600: #ff3d4a;
+$danger_700: #ff2e3c;
+
+/**
+ * Warning
+ */
+$warning_50: #fffbf7;
+$warning_100: #fff8f0;
+$warning_200: #fff1db;
+$warning_300: #ffd9ad;
+$warning_400: #ffbc70;
+$warning_500: #ffa033;
+$warning_600: #ff8f0f;
+$warning_700: #fe8a05;
+
+/**
+ * Success
+ */
+$success_50: #f4fef9;
+$success_100: #ebfaf3;
+$success_200: #d8f5e7;
+$success_300: #b6f0d4;
+$success_400: #81d6ad;
+$success_500: #48c789;
+$success_600: #30b876;
+$success_700: #21ad6a;
+
+/**
+ * Info
+ */
+$info_50: #f2faff;
+$info_100: #ebf7ff;
+$info_200: #d1edff;
+$info_300: #a3daff;
+$info_400: #5cbeff;
+$info_500: #29a9ff;
+$info_600: #0099ff;
+$info_700: #1a85ff;

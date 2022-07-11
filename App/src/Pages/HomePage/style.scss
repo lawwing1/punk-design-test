@@ -1,8 +1,23 @@
 .fullpage {
     // height: 100vh;
-    transition: all .1s;
+    display: flex;
+    justify-content: center;
+    transition: all 0.1s;
+    margin-top: 100px;
     .section {
         width: 100%;
         height: 100vh;
     }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+    margin-bottom: 0;
 }
