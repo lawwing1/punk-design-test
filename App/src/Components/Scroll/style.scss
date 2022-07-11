@@ -1,20 +1,36 @@
+/**
+* @file 
+* @date 2022-07-11
+* @author 
+* @lastModify  2022-07-11
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '../../Constant/breakPoint.scss';
+@import '../../Constant/font.scss';
+@import '../../Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+/* <--------------------------- * SECTION1 * --------------------------- */
+
 .scroll_container {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    padding-right: 6px;
+    box-sizing: content-box;
+}
 
-    .container_contentBox {
+.scroll_box {
+}
 
-    }
-    .container_sidebar {
-        // position: relative;
-        width: 10px;
-        height: 100%;
-        background-color: rgba(0,0,0,0.3);
-        .sidebar_bar {
-            width: 10px;
-            // height: 20px;
-            border-radius: 5px;
-            background-color: aqua;
-        }
-    }
+.scroll_bar {
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: $neutral_300;
 }

@@ -8,6 +8,7 @@
 /** This section will include all the necessary dependence for this tsx file */
 import React, { useState, useEffect } from 'react';
 import Pagination from '../../Components/Pagination';
+import Scroll from '~/Components/Scroll';
 import style from './style.scss';
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** INTERFACE START **** ------------------------------------ */
@@ -52,28 +53,28 @@ const HomePage = (): JSX.Element => {
     //         transition: `all ${animateTime}ms ${animateDuration} 0s`
     //     }
     // }
-    const [currentPos, setCurrentPos] = useState(0);
-    const [isScroll, setIsScroll] = useState(true);
+    // const [currentPos, setCurrentPos] = useState(0);
+    // const [isScroll, setIsScroll] = useState(true);
 
-    useEffect(() => {
-        if (!isScroll) return;
-        document
-            .getElementsByClassName('fullpage')[0]
-            .addEventListener('mousewheel', windowmousewheel, false);
-        return () => {
-            document
-                .getElementsByClassName('fullpage')[0]
-                .removeEventListener('mousewheel', windowmousewheel, false);
-        };
-    }, [currentPos, isScroll]);
+    // useEffect(() => {
+    //     if (!isScroll) return;
+    //     document
+    //         .getElementsByClassName('fullpage')[0]
+    //         .addEventListener('mousewheel', windowmousewheel, false);
+    //     return () => {
+    //         document
+    //             .getElementsByClassName('fullpage')[0]
+    //             .removeEventListener('mousewheel', windowmousewheel, false);
+    //     };
+    // }, [currentPos, isScroll]);
 
-    const windowmousewheel = (e) => {
-        e.deltaY > 0 ? setCurrentPos(currentPos - 100) : setCurrentPos(currentPos + 100);
-    };
+    // const windowmousewheel = (e) => {
+    //     e.deltaY > 0 ? setCurrentPos(currentPos - 100) : setCurrentPos(currentPos + 100);
+    // };
 
-    const changeScroll = (num: number) => {
-        num ? setIsScroll(false) : setIsScroll(true);
-    };
+    // const changeScroll = (num: number) => {
+    //     num ? setIsScroll(false) : setIsScroll(true);
+    // };
 
     const [current, setCurrent] = useState(1);
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
@@ -89,7 +90,7 @@ const HomePage = (): JSX.Element => {
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return (
         <>
-            <div className={style.fullpage} style={{ transform: `translateY(${currentPos}px)` }}>
+            <div className={style.fullpage}>
                 {/* <div className={style.section + " " + (currentPage === 0 ? "active" : "")} style={{ "height": sizeY + "px" }}>
                 <PageOne></PageOne>
             </div>
@@ -108,6 +109,10 @@ const HomePage = (): JSX.Element => {
                     current={current}
                     onChange={onChangeCurrent}
                 />
+
+                <Scroll width="400px" height="300px">
+                    <div className="email_box"></div>
+                </Scroll>
             </div>
         </>
     );
