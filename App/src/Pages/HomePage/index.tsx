@@ -111,7 +111,9 @@ const HomePage = (): JSX.Element => {
                 />
 
                 <Scroll width="400px" height="300px">
-                    <div className="email_box"></div>
+                    <div className="email_box" style={{ background: 'rgba(0,0,0,0.3)' }}>
+                        111
+                    </div>
                 </Scroll>
             </div>
         </>

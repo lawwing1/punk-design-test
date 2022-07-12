@@ -22,15 +22,38 @@
     position: relative;
     padding-right: 6px;
     box-sizing: content-box;
+    background-color: skyblue;
+    // overflow: hidden;
 }
 
 .scroll_box {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    transition: transform 0.2s;
 }
 
-.scroll_bar {
+.scroll_colbar {
     position: absolute;
     width: 6px;
     height: 50px;
+    right: 0;
+    top: 0;
+    border-radius: 3px;
+    transition: transform 0.2s;
+    background-color: $neutral_300;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.scroll_rowbar {
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    left: 0;
+    bottom: 0;
     border-radius: 3px;
     background-color: $neutral_300;
+    z-index: 99999;
+    cursor: pointer;
 }
