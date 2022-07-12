@@ -71,6 +71,9 @@
     }
     &.disabled {
         cursor: no-drop;
+        &:hover {
+            border: 1px solid $transparent;
+        }
     }
 }
 

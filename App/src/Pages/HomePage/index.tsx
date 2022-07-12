@@ -103,12 +103,7 @@ const HomePage = (): JSX.Element => {
             <div className={style.section + " " + (currentPage === 3 ? "active" : "")} style={{ "height": sizeY + "px" }}>
                 <PageFour></PageFour>
             </div> */}
-                <Pagination
-                    count={100}
-                    type="default"
-                    current={current}
-                    onChange={onChangeCurrent}
-                />
+                <Pagination count={100} type="solid" current={current} onChange={onChangeCurrent} />
 
                 <Scroll width="400px" height="300px">
                     <div className="email_box" style={{ background: 'rgba(0,0,0,0.3)' }}>
