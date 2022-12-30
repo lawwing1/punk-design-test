@@ -1,20 +1,18 @@
 /**
 * @file 
-* @date 2022-07-11
+* @date 2022-05-09
 * @author 
-* @lastModify  2022-07-11
+* @lastModify  2022-05-09
 */
 /* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
 /** Import all the reference constant after this line */
-
+// @import '../../Constant/breakPoint.scss';
+// @import '../../Constant/font.scss';
+// @import '../../Constant/color.scss';
 /* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
 /** The demo mixin is ..........*/
-@mixin demo {
-}
 /* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
 /* <--------------------------- * SECTION1 * --------------------------- */
-.Icon {
-    display: flex;
-}
+
 /* <--------------------------- * SECTION1 * --------------------------- */

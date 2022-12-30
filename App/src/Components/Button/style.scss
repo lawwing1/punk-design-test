@@ -1,0 +1,139 @@
+/**
+* @file 
+* @date 2022-12-30
+* @author 
+* @lastModify  2022-12-30
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.button_content {
+    border-radius: 0.6rem;
+    border: 0.1rem solid $primary_600;
+    cursor: pointer;
+
+    &.disabled {
+        cursor: no-drop;
+    }
+
+    &.isLoading {
+        opacity: 0.7;
+        cursor: default;
+    }
+
+    &.size_small {
+        padding: 0 0.7rem;
+    }
+    &.size_normal {
+        padding: 0.4rem 1.5rem;
+    }
+    &.size_large {
+        padding: 0.6rem 1.6rem;
+    }
+
+    &.type_primary {
+        border: none;
+        &.color_primary {
+            background-color: $primary_100;
+        }
+        &.color_auxiliary {
+            background-color: $auxiliary_100;
+        }
+        &.color_danger {
+            background-color: $danger_100;
+        }
+        &.color_warning {
+            background-color: $warning_100;
+        }
+        &.color_success {
+            background-color: $success_100;
+        }
+        &.color_info {
+            background-color: $info_100;
+        }
+
+        &.disabled {
+        }
+    }
+
+    &.type_secondary {
+        &.color_primary {
+            border-color: $primary_600;
+        }
+        &.color_auxiliary {
+            border-color: $auxiliary_600;
+        }
+        &.color_danger {
+            border-color: $danger_600;
+        }
+        &.color_warning {
+            border-color: $warning_600;
+        }
+        &.color_success {
+            border-color: $success_600;
+        }
+        &.color_info {
+            border-color: $info_600;
+        }
+
+        &.disabled {
+        }
+    }
+
+    &.type_text {
+        &.color_primary {
+            border-color: $primary_600;
+        }
+        &.color_auxiliary {
+            border-color: $auxiliary_600;
+        }
+        &.color_danger {
+            border-color: $danger_600;
+        }
+        &.color_warning {
+            border-color: $warning_600;
+        }
+        &.color_success {
+            border-color: $success_600;
+        }
+        &.color_info {
+            border-color: $info_600;
+        }
+        &.disabled {
+        }
+    }
+
+    &.type_dashed {
+        &.color_primary {
+            border-color: $primary_600;
+        }
+        &.color_auxiliary {
+            border-color: $auxiliary_600;
+        }
+        &.color_danger {
+            border-color: $danger_600;
+        }
+        &.color_warning {
+            border-color: $warning_600;
+        }
+        &.color_success {
+            border-color: $success_600;
+        }
+        &.color_info {
+            border-color: $info_600;
+        }
+
+        &.disabled {
+        }
+    }
+}
+/* <--------------------------- * SECTION1 * --------------------------- */

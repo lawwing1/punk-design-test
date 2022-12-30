@@ -1,0 +1,96 @@
+/**
+* @file 
+* @date 2022-05-09
+* @author 
+* @lastModify  2022-05-09
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '../../Constant/breakPoint.scss';
+@import '../../Constant/font.scss';
+@import '../../Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+
+.notice_container {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+}
+
+.notice_item {
+    width: 40rem;
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    transform: translateX(0);
+
+    &.enter {
+        animation: noticeEnterFrames 0.5s;
+    }
+
+    &.leave {
+        animation: noticeLeaveFrames 0.5s;
+    }
+
+    &.success {
+        background-color: $success_100;
+        border: 0.1rem solid $success_600;
+    }
+
+    &.error {
+        background-color: $danger_100;
+        border: 0.1rem solid $danger_600;
+    }
+
+    &.info {
+        background-color: $info_100;
+        border: 0.1rem solid $info_600;
+    }
+
+    &.warning {
+        background-color: $warning_100;
+        border: 0.1rem solid $warning_600;
+    }
+}
+
+.notice_title {
+    display: flex;
+    align-items: center;
+    color: $neutral_500;
+    @include c_body_1;
+}
+
+.notice_titleMsg {
+    margin-left: 0.8rem;
+}
+
+.notice_message {
+    color: $neutral_400;
+    @include c_body_3;
+    margin-top: 0.8rem;
+    word-break: break-all;
+}
+
+@keyframes noticeEnterFrames {
+    0% {
+        transform: translateX(110%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes noticeLeaveFrames {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+/* <--------------------------- * SECTION1 * --------------------------- */

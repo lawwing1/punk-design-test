@@ -1,0 +1,77 @@
+/**
+* @file 
+* @date 2022-12-30
+* @author 
+* @lastModify  2022-12-30
+*/
+/* <------------------------------------ **** CONSTANT IMPORT START **** ------------------------------------ */
+/** Import all the reference constant after this line */
+@import '~/Constant/breakPoint.scss';
+@import '~/Constant/font.scss';
+@import '~/Constant/color.scss';
+/* <------------------------------------ **** CONSTANT IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** SECTION1 MIXIN START **** ------------------------------------ */
+/** The demo mixin is ..........*/
+@mixin demo {
+}
+/* <------------------------------------ **** SECTION1 MIXIN END **** ------------------------------------ */
+/* <--------------------------- * SECTION1 * --------------------------- */
+.modal_container__all {
+}
+
+.modal_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    pointer-events: none;
+
+    &.show {
+        pointer-events: visible;
+
+        .modal_mask {
+            opacity: 0.5;
+        }
+
+        .modal_wrapper {
+            opacity: 1;
+        }
+    }
+}
+
+.modal_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+
+.modal_wrapper {
+    position: relative;
+    background-color: $white;
+    border-radius: 0.6rem;
+    padding: 2.4rem;
+    opacity: 0;
+}
+
+.modal_closeIcon {
+    position: absolute;
+    cursor: pointer;
+    right: 2.4rem;
+    top: 2.4rem;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+/* <--------------------------- * SECTION1 * --------------------------- */
